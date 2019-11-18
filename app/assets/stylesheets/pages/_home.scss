@@ -44,8 +44,12 @@ body {
 }
 
 .footer {
-
   position: absolute;
+  width: 100%;
   bottom: 0;
   background-color: #B0D7FF;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+
 }
