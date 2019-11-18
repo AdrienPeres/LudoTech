@@ -1,1 +1,51 @@
 // Specific CSS for your home-page
+html{
+  height:100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(230,230,230);
+  height:100%;
+  position: relative;
+}
+
+.navbar-light .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1D3461;
+}
+
+.navbar {
+  background-color: #d8d5DB;
+}
+
+.fas {
+  color: #1D3461;
+}
+
+.btn-primary {
+  background-color: #B0D7FF;
+  border-color: #B0D7FF;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+  background-color: #1D3461;
+  border-color: #1D3461;
+  color: white;
+}
+
+.banner {
+  background-color: #1D3461;
+  color: white;
+  height: auto;
+  padding: 200px;
+}
+
+.footer {
+
+  position: absolute;
+  bottom: 0;
+  background-color: #B0D7FF;
+}
