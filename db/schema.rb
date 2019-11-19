@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_11_18_163420) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
+    t.string "description"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_11_18_163420) do
   create_table "offers", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "date"
     t.bigint "user_id"
     t.bigint "game_id"
     t.datetime "created_at", null: false

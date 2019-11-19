@@ -4,7 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :games, dependent: :destroy
-  has_many :offers, through: :games
-
-  validates :username, presence: true, uniqueness: true
+  has_many :offers
 end
