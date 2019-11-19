@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
   root to: 'offers#index'
-
-  get 'offers/:id', to: 'offers#show'
-  patch 'offers/:id', to: 'offers#update'
-
-  get 'my/offers', to: 'offers#index'
-
-
-
-  # devise_for :users
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
-
-
+​
+  resources :offers, only: [ :show, :update ]
+​
+  namespace :my do
+    resources :offers, only: :index
+  end
+​
+  devise_for :users
+​
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
