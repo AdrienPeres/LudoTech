@@ -1,0 +1,17 @@
+<!-- app/views/admin/restaurants/index.html.erb -->
+<h1>Mes jeux réservés</h1>
+<% @offers.each do |offer| %>
+
+<div class="card-product">
+  <img src="http://www.online-casinos-707.net/wp-content/uploads/2017/09/jeux-de-societe.jpg" />
+  <div class="card-product-infos">
+
+  <h2>voici une offre <%= offer.title %></h2>
+  <p>et sa description<%= offer.description %></p>
+
+  </div>
+</div>
+
+<% end %>
+
+<!-- code couleurs de la homepage : Space Cadet #1D3461, Fresh Air #B0D7FF, Gainsbord #D8D5DB -->
