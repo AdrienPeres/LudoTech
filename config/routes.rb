@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
- # namespace :owner do
- #   get 'games/index'
- #   get 'games/new'
- #   get 'games/create'
- # end
+ namespace :owner do
+   get 'games/index'
+   get 'games/new'
+   get 'games/create'
+ end
 
   root to: 'offers#index'
 
