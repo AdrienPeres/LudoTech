@@ -16,7 +16,7 @@ titibs = User.create!(username: 'Titibs', email: 'Thibaud.garnier@gmail.com', pa
 marie = User.create!(username: 'Marie', email: 'marie@gmail.com', password: "azerty")
 
 monopoly = Game.create!(name: 'Monopoly', description: 'un monopoly classique', user: francine, photo:'https://www.regles-de-jeux.com/wp-content/uploads/2014/03/regle-monopoly.jpg')
-scrabble = Game.create!(name: 'Scrabble', description: 'un Scrabble classique',user: titibs, photo: 'https://images-na.ssl-images-amazon.com/images/G/02/aplusautomation/vendorimages/3113c3f5-ed56-4fd4-9649-65df7d902196.jpg._CB328300798_.jpg')
+scrabble = Game.create!(name: 'Scrabble', description: 'un Scrabble classique',user: titibs, photo: 'https://cdn.pixabay.com/photo/2015/09/05/21/40/scrabble-925520_960_720.jpg')
 risk = Game.create!(name: 'Risk', description: 'un Risk classique', user: titibs, photo:'https://c8.alamy.com/comp/C5MA7M/the-box-for-the-board-game-risk-C5MA7M.jpg')
 bonne_paye = Game.create!(name: 'Bonne paye', description: 'une Bonne paye classique', user: francine, photo:'https://www.regles-de-jeux.com/wp-content/uploads/2012/11/bonne-paie1.jpg')
 

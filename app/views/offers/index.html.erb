@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://www.online-casinos-707.net/wp-content/uploads/2017/09/jeux-de-societe.jpg);">
   <div class="container">
-    <h1>Ludotech apporte à chacun <strong>une nouvelle opportunité</strong> !</h1>
-    <p>Changez votre quotidien, apportez du jeu dans vos vies !</p>
+    <h1>Ludotech</h1>
+    <h4>Changez votre quotidien, apportez du jeu dans vos vies !</h4>
   </div>
 </div>
 
@@ -9,12 +9,12 @@
 
 <div class="cards container">
   <% @offers.each do |offer| %>
-    <div class="card-game" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= offer.game.photo %>)">
+    <div class="card-game d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= offer.game.photo %>)">
       <div>
-        <h3>  <%= offer.game.name %> </h3>
+        <h3>  <%= link_to offer.game.name, offer_path(offer), class: "link-to-show"%> </h3>
         <p> <%= offer.game.user.username %></p>
-        </div>
       </div>
+    </div>
   <% end %>
 </div>
 
