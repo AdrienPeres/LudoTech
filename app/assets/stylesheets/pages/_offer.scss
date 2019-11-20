@@ -1,0 +1,35 @@
+.show {
+  position: relative;
+}
+
+#owner {
+  overflow: hidden;
+  background: white;
+  width: 45%;
+  height: 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: absolute;
+  right: 0;
+}
+
+#date {
+  overflow: hidden;
+  background: white;
+  height: 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 45%;
+}
+
+.button-ludo {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  margin-left: 20px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.button-ludo:hover {
+  background: #1BCB7F;
+  color: white;
+}
