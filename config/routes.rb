@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'offers#index'
 
   resources :offers, only: [ :show, :update ]
+  # patch 'offers/:id', to: 'offers#update', as: :book_offer
 # ​
   namespace :my do
     resources :offers, only: :index
