@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
+
+ # namespace :owner do
+ #   get 'games/index'
+ #   get 'games/new'
+ #   get 'games/create'
+ # end
+
   root to: 'offers#index'
 
-  get 'offers/:id', to: 'offers#show'
-  patch 'offers/:id', to: 'offers#update'
+  resources :offers, only: [ :show, :update ]
 
-  get 'my/offers', to: 'offers#index'
+  namespace :my do
+    resources :offers, only: :index
+  end
 
+  namespace :owner do
+    resources :offers, only: :index
+    resources :games, only: [ :index, :new, :create ]
+  end
 
-
-  # devise_for :users
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
-
+  devise_for :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

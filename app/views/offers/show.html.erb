@@ -1,2 +1,30 @@
-<h1>Offers#show</h1>
-<p>Find me in app/views/offers/show.html.erb</p>
+<div class="d-flex show">
+  <div class="container p-1 m-3">
+    <div class="card-trip">
+      <img src="https://cdn.pixabay.com/photo/2015/09/05/21/40/scrabble-925520_960_720.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @offer.title %></h2>
+          <p>Offre pour le jeu : <%= @offer.game.name %></p>
+        </div>
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+      <div class="card-trip mt-3 card-description">
+        <p><%= @offer.description %></p>
+      </div>
+    <div class="d-flex mt-3 card-date">
+      <div id="date">
+        <p><%= @offer.date %></p>
+      </div>
+      <div id="owner">
+        <p>proposer par : Francine</p>
+      </div>
+    </div>
+  </div>
+  <div class="container book-card">
+
+  </div>
+</div>
+
+<%= link_to 'Book this offer', offer_path(@offer, offer: {user_id: current_user.id}) , method: :patch, data: {confirm: "You want to book this offer ?"}, class: 'button-ludo'%>
