@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
 
+ # namespace :owner do
+ #   get 'games/index'
+ #   get 'games/new'
+ #   get 'games/create'
+ # end
+
   root to: 'offers#index'
 
   resources :offers, only: [ :show, :update ]
 
   namespace :my do
     resources :offers, only: :index
+  end
+
+  namespace :owner do
+    resources :offers, only: :index
+    resources :games, only: [ :index, :new, :create ]
   end
 
   devise_for :users
