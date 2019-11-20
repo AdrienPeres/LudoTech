@@ -2,7 +2,7 @@
 <% @offers.each do |offer| %>
 
 <div class="card-product">
-  <img src="http://www.online-casinos-707.net/wp-content/uploads/2017/09/jeux-de-societe.jpg" />
+  <img src="<%= offer.game.photo %>" />
   <div class="card-product-infos">
 
   <h2>voici une offre <%= offer.title %></h2>

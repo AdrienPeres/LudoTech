@@ -33,3 +33,12 @@
   background: #1BCB7F;
   color: white;
 }
+
+.link-to-show {
+  color: white;
+}
+
+.link-to-show:hover {
+  text-decoration: none;
+  color: $fresh-air;
+}
