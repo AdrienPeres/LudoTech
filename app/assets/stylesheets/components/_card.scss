@@ -58,20 +58,8 @@
   position: relative;
 }
 
-#owner {
-  overflow: hidden;
-  background: white;
-  width: 45%;
-  height: 50px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.book-card {
   position: absolute;
-  right: 0;
-}
-
-#date {
-  overflow: hidden;
-  background: white;
-  height: 50px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 45%;
+  top: 10px;
+  right: 10px;
 }

@@ -10,7 +10,7 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.all.find(params[:id])
     if @offer.update(offer_params)
-      redirect_to @offer, notice: 'Offer was successfuly booked!'
+      redirect_to my_offer, notice: 'Offer was successfuly booked!'
     else
       render :show
     end
