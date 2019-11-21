@@ -5,10 +5,8 @@
 <% @games.each do |game| %>
 
 <div class="card-product">
-  <img src="image issue du formulaire" />  <!-- TO DO  -->
+  <%= cl_image_tag(game.photo) %>
     <div class="card-product-infos">
-<!--       pourvoir supprimer un jeu, à faire ici ou dans une méthode delete ?
- au moins faire afficher le bouton delete-->
       <h2><%= game.name %></h2>
       <p><%= game.description %></p>
       <%= link_to "delete", owner_game_path(game), method: :delete, class: "btn btn-primary" %>
