@@ -1,0 +1,8 @@
+<h1>Offers#index</h1>
+<% @offers.each do |offer| %>
+  <%= offer.title %> <% if offer.user.nil? %>
+  <p>Votre offre est réservé !</p>
+  <% else %>
+  <p>Pas encore réservé !</p>
+  <% end %>
+<% end %>

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   namespace :owner do
-    resources :offers, only: :index
+    resources :offers, only: [ :index, :new, :create ]
     resources :games, only: [ :index, :new, :create ]
   end
 
