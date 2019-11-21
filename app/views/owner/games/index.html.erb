@@ -1,15 +1,22 @@
 <h1>Mes jeux</h1>
+
+<%= link_to "create", new_owner_game_path, class: "btn btn-primary" %>
+
 <% @games.each do |game| %>
 
 <div class="card-product">
-  <img src="http://www.online-casinos-707.net/wp-content/uploads/2017/09/jeux-de-societe.jpg" />
-  <div class="card-product-infos">
+  <img src="image issue du formulaire" />  <!-- TO DO  -->
+    <div class="card-product-infos">
+<!--       pourvoir supprimer un jeu, à faire ici ou dans une méthode delete ?
+ au moins faire afficher le bouton delete-->
+      <h2><%= game.name %></h2>
+      <p><%= game.description %></p>
+<%= link_to "delete",  owner_game_path(game), method: :delete, class: "btn btn-primary" %>
 
-  <h2>voici une offre <%= game.title %></h2>
-  <p>et sa description<%= game.description %></p>
 
-  </div>
+    </div>
 </div>
+
 
 <% end %>
 
