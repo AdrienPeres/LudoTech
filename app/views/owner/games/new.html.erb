@@ -1,2 +1,17 @@
-<h1>Owner::Games#new</h1>
-<p>Find me in app/views/owner/games/new.html.erb</p>
+<h1>Ajouter un jeu</h1>
+
+<%= simple_form_for [:owner, @game] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: "nom du jeu" %>
+    <%= f.input :description, label: "ajoutez une description" %>
+    <%= f.input :photo, as: :file, label: "ajoutez une image du jeu" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Ajouter" %>
+  </div>
+<% end %>
+
+<%= link_to "Retour", :back %>

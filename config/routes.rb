@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
- namespace :owner do
-   get 'games/index'
-   get 'games/new'
-   get 'games/create'
- end
+ # namespace :owner do
+ #   get 'games/index'
+ #   get 'games/new'
+ #   get 'games/create'
+ # end
 
   root to: 'offers#index'
 
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   namespace :owner do
     resources :offers, only: [ :index, :new, :create ]
-    resources :games, only: [ :index, :new, :create ]
+    resources :games, only: [ :index, :new, :create, :destroy, :edit, :update ]
   end
 
   devise_for :users
