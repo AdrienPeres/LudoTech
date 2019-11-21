@@ -1,0 +1,31 @@
+.ludo-button input {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: $space-cadet;
+  transition: background 0.3s ease;
+  border: 1px solid $space-cadet;
+  background-size: cover;
+}
+
+.ludo:hover {
+  background: $fresh-air;
+  color: white;
+}
+
+.ludo-danger {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: $venetian-red;
+  transition: background 0.3s ease;
+  border: 1px solid $venetian-red;
+  background-size: cover;
+}
+
+.ludo-danger:hover {
+  background: $heat-wave;
+  color: white;
+}
