@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   end
 
   namespace :owner do
-    resources :offers, only: [ :index, :new, :create ]
-    resources :games, only: [ :index, :new, :create, :destroy, :edit, :update ]
+    resources :offers, only: [ :index, :edit, :update, :destroy]
+    resources :games, only: [ :index, :new, :create, :destroy, :edit, :update ] do
+      resources :offers, only: [ :new, :create ]
+    end
   end
 
   devise_for :users

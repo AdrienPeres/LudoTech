@@ -13,6 +13,8 @@
       <p><%= game.description %></p>
       <%= link_to "delete", owner_game_path(game), method: :delete, class: "btn btn-primary" %>
       <%= link_to "edit", edit_owner_game_path(game), class: "btn btn-primary" %>
+      <%= link_to "Nouvelle offre", new_owner_game_offer_path(game, game: game.id), class: "btn btn-primary" %>
+
     </div>
 </div>
 
