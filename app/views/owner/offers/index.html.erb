@@ -1,14 +1,29 @@
 <h1>Mes offres</h1>
-<% @offers.each do |offer| %>
-  <%= offer.title %>
-  <%= offer.game.user.username %>
-  <%= link_to "Supprimer offre", owner_offer_path(offer), method: :delete, class: "btn-primary"  %>
-  <%= link_to "Editer offre", edit_owner_offer_path(offer), class: "btn-primary"  %>
-   <% if offer.user.nil? %>
-    <p>Pas encore réservé !</p>
-  <% else %>
-    <p>Votre offre est réservé !</p>
-  <% end %>
-<% end %>
+<div class="game-cards container d-flex flex-column" >
+  <% @offers.each do |offer| %>
+  <div class="card-product d-flex mb-3">
+    <div class="p-2 w-30">
+          <%= cl_image_tag(offer.game.photo) %>
+        </div>
+    <div class="card-product-infos w-50">
+      <h2><%= offer.title %></h2>
+      <p>loué à : <strong><%= offer.game.user.username %></strong></p>
+    </div>
+    <div class="d-flex flex-column justify-content-around w-20 mr-5">
+      <%= link_to "Supprimer offre", owner_offer_path(offer), method: :delete, class: "ludo-button ludo"  %>
+      <%= link_to "Editer offre", edit_owner_offer_path(offer), class: "ludo-button ludo"  %>
+    </div>
+    <% if offer.user.nil? %>
+    <div class="d-flex">
+      <i class="far fa-hourglass check"></i>
+    </div>
+    <% else %>
+    <div class="d-flex">
+      <i class="far fa-check-square check"></i>
+    </div>
+    <% end %>
+  </div>
 
- <%= link_to "Retour à la liste de jeux", owner_games_path  %>
+  <% end %>
+
+ <%= link_to "Retour à la liste de jeux", owner_games_path, class: "ludo-button ludo"  %>
