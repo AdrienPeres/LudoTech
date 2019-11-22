@@ -62,7 +62,9 @@
       Remplissez le formulaire d'inscription pour commencer à découvrir de nouveaux jeux
       et à bâtir votre ludothèque connectée.
     </p>
+    <%= link_to new_user_registration_path do %>
     <button>En savoir plus</button>
+    <% end  %>
   </li>
   <li>
     <!-- <h2>02</h2> -->
@@ -72,7 +74,9 @@
       pour voir toutes les offres de locations en cours.
 
     </p>
+    <%= link_to offers_path do %>
     <button>En savoir plus</button>
+    <% end  %>
   </li>
   <li>
     <!-- <h2>03</h2> -->
@@ -81,7 +85,9 @@
       Cliquez sur l'offre qui vous intéresse. Vous ajouterez alors le jeu à votre liste de
       locations en cours et futures.
     </p>
+    <%= link_to my_offers_path do %>
     <button>En savoir plus</button>
+    <% end  %>
   </li>
   <li>
     <!-- <h2>04</h2> -->
@@ -90,7 +96,9 @@
       Ajoutez des jeux à votre propre ludothèque pour la montrer à tous ! Commencez à
     créer vos propres offres et louez votre jeu à tous les curieux.
     </p>
-    <button>En savoir plus</button>
+    <%= link_to owner_games_path do %>
+      <button>En savoir plus</button>
+    <% end  %>
   </li>
 </ul>
 
