@@ -2,7 +2,7 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :update]
 
   def index
-    #@offers = Offer.all
+    # @offers = Offer.all
     if params[:query].present?
       sql_query = " \
         offers.title @@ :query \
@@ -36,5 +36,4 @@ class OffersController < ApplicationController
   def offer_params
     params.require(:offer).permit(:user_id)
   end
-
 end
