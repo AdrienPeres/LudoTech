@@ -15,8 +15,8 @@
           </p>
         </div>
         <div class="d-flex flex-column justify-content-around w-20">
-              <%= link_to " supprimer", owner_game_path(game), method: :delete, class: "fa fa-trash"  %>
-              <%= link_to " modifier", edit_owner_game_path(game), class: "far fa-edit" %>
+              <%= link_to " supprimer", owner_game_path(game), method: :delete, class: "fa fa-trash link"  %>
+              <%= link_to " modifier", edit_owner_game_path(game), class: "far fa-edit link" %>
               <%= link_to "Mettre en location", new_owner_game_offer_path(game, game: game.id), class: "ludo-button ludo" %>
         </div>
       </div>
