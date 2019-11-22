@@ -1,16 +1,21 @@
-<h1>Mes réservations</h1>
-<% @offers.each do |offer| %>
 
-<div class="card-product">
-  <img src="<%= offer.game.photo %>" />
-  <div class="card-product-infos">
-
-  <h2>voici une offre <%= offer.title %></h2>
-  <p>et sa description<%= offer.description %></p>
-
-  </div>
+<div class="game-cards container d-flex flex-column" >
+  <h1 class="titre_jeux">Mes réservations</h1>
+    <% @offers.each do |offer| %>
+      <div class="card-product d-flex mb-3">
+        <div class="p-2 w-30">
+        </div>
+        <div class="card-product-infos w-50">
+          <h2>
+            <%= offer.title %>
+          </h2>
+          <p>
+            <%= offer.description %>
+          </p>
+        </div>
+      </div>
+    <% end %>
 </div>
 
-<% end %>
 
 <!-- code couleurs de la homepage : Space Cadet #1D3461, Fresh Air #B0D7FF, Gainsbord #D8D5DB -->
