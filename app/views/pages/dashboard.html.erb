@@ -1,26 +1,39 @@
-<div class="dashboard-banner">
-  <div class="container">
-    <h1>Profil de <%=@user.username %></h1>
+<div class="dashboard-body">
+  <div class="dashboard-banner">
+    <div class="">
+      <h1 class="header1-dashboard">Profil de <%=@user.username %></h1>
+    </div>
   </div>
-</div>
-<div>
-  <img src="https://avatars1.githubusercontent.com/u/55381791?v=4" alt="" class="avatar-large dashboard-avatar">
-</div>
-
-
-<div class="container d-flex">
-  <h2>Vos coordonnées</h2>
-  <div class="card-product m-1">
-    <%= @user.username %>
-  </div>
-  <div class="card-product m-1">
-  <%= @user.email %>
-  </div>
-
-  <div class= "ludo-button ludo" >
-    <%= link_to "Modifier profil", edit_user_registration_path %>
+  <div>
+    <img src="https://avatars1.githubusercontent.com/u/55381791?v=4" alt="" class="avatar-large dashboard-avatar">
   </div>
 
 
+  <div class="container d-flex flex-column">
+    <div class="coordinates">
+      <h2 class="mt-2">Vos coordonnées</h2>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Pseudo :</span>
+        </div>
+        <input type="text" disabled="disabled" class="form-control" placeholder="<%= @user.username %>" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+       <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Email :</span>
+        </div>
+        <input type="text" disabled="disabled" class="form-control" placeholder="<%= @user.email %>" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+       <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Date d'inscirption : </span>
+        </div>
+        <input type="text" disabled="disabled" class="form-control" placeholder="<%= "#{@user.created_at.to_a[3]}, #{@user.created_at.to_a[4]}, #{@user.created_at.to_a[5]}" %>" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
 
+      <div>
+        <%= link_to "Modifier les informations", edit_user_registration_path, class: "ludo-button ludo" %>
+      </div>
+    </div>
+  </div>
 </div>
