@@ -1,0 +1,23 @@
+.dashboard-banner {
+  background: $space-cadet;
+  height: 200px;
+  position: relative;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: white;
+  padding: 15px;
+}
+
+.dashboard-avatar {
+  position: absolute;
+  top: 230px;
+  left: 100px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.container {
+  align-items: center;
+}

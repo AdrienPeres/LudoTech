@@ -1,0 +1,25 @@
+<h1>Offers#new</h1>
+<div class="container">
+  <%= simple_form_for [:owner, :game, @offer] do |f|%>
+    <div class="form-group">
+      <div>
+        <%= f.label :title %>
+      </div>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <div>
+        <%= f.label :description %>
+      </div>
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <div>
+        <%= f.label :date %>
+      </div>
+      <%= f.text_field :date %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>

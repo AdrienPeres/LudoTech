@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-
- namespace :owner do
-   get 'games/index'
-   get 'games/new'
-   get 'games/create'
- end
-
   root to: 'pages#home'
 
   resources :offers, only: [ :index, :show, :update ]
@@ -15,11 +8,13 @@ Rails.application.routes.draw do
   end
 
   namespace :owner do
-    resources :offers, only: :index
-    resources :games, only: [ :index, :new, :create ] do
-      resources :offers, only: [:new, :create ]
+    resources :offers, only: [ :index, :edit, :update, :destroy]
+    resources :games, only: [ :index, :new, :create, :destroy, :edit, :update ] do
+      resources :offers, only: [ :new, :create ]
     end
   end
+
+  get 'users/dashboard', to: 'pages#dashboard'
 
   devise_for :users
 

@@ -1,14 +1,19 @@
 <h1>Mes jeux</h1>
+
+<%= link_to "create", new_owner_game_path, class: "btn btn-primary" %>
+
 <% @games.each do |game| %>
 
 <div class="card-product">
-  <img src="http://www.online-casinos-707.net/wp-content/uploads/2017/09/jeux-de-societe.jpg" />
-  <div class="card-product-infos">
+  <%= cl_image_tag(game.photo) %>
+    <div class="card-product-infos">
+      <h2><%= game.name %></h2>
+      <p><%= game.description %></p>
+      <%= link_to "delete", owner_game_path(game), method: :delete, class: "btn btn-primary" %>
+      <%= link_to "edit", edit_owner_game_path(game), class: "btn btn-primary" %>
+      <%= link_to "Nouvelle offre", new_owner_game_offer_path(game, game: game.id), class: "btn btn-primary" %>
 
-  <h2>voici une offre <%= game.title %></h2>
-  <p>et sa description<%= game.description %></p>
-
-  </div>
+    </div>
 </div>
 
 <% end %>

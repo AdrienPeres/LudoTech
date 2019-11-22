@@ -1,0 +1,14 @@
+<h1>Mes offres</h1>
+<% @offers.each do |offer| %>
+  <%= offer.title %>
+  <%= offer.game.user.username %>
+  <%= link_to "Supprimer offre", owner_offer_path(offer), method: :delete, class: "btn-primary"  %>
+  <%= link_to "Editer offre", edit_owner_offer_path(offer), class: "btn-primary"  %>
+   <% if offer.user.nil? %>
+    <p>Pas encore réservé !</p>
+  <% else %>
+    <p>Votre offre est réservé !</p>
+  <% end %>
+<% end %>
+
+ <%= link_to "Retour à la liste de jeux", owner_games_path  %>

@@ -1,0 +1,26 @@
+<div class="dashboard-banner">
+  <div class="container">
+    <h1>Profil de <%=@user.username %></h1>
+  </div>
+</div>
+<div>
+  <img src="https://avatars1.githubusercontent.com/u/55381791?v=4" alt="" class="avatar-large dashboard-avatar">
+</div>
+
+
+<div class="container d-flex">
+  <h2>Vos coordonnées</h2>
+  <div class="card-product m-1">
+    <%= @user.username %>
+  </div>
+  <div class="card-product m-1">
+  <%= @user.email %>
+  </div>
+
+  <div class= "ludo-button ludo" >
+    <%= link_to "Modifier profil", edit_user_registration_path %>
+  </div>
+
+
+
+</div>
