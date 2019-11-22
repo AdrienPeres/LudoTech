@@ -1,2 +1,13 @@
 // Specific CSS for your home-page
 
+.ludotech {
+  color: $space-cadet;
+  justify-content: left;
+  h4 {
+  color: white;
+  }
+}
+
+.ludotech:hover {
+  text-decoration: none;
+}
