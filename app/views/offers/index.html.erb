@@ -9,12 +9,14 @@
 
 <div class="cards container">
   <% @offers.each do |offer| %>
-    <div class="card-game d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= offer.game.photo %>)">
-      <div>
-        <h3> <%= link_to offer.game.name, offer_path(offer), class: "link-to-show"%> </h3>
-        <p> <%= offer.game.user.username %></p>
+    <%= link_to offer_path(offer), class: "card-game d-flex" do %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= offer.game.photo %>)">
+        <div>
+          <h3 class= "link-to-show"> <%= offer.game.name %> </h3>
+          <p> <%= offer.game.user.username %></p>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
 
