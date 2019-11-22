@@ -1,9 +1,17 @@
 class OffersController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
   before_action :set_offer, only: [:show, :update]
 
   def index
-    @offers = Offer.all
+    #@offers = Offer.all
+    if params[:query].present?
+      sql_query = " \
+        offers.title @@ :query \
+        OR games.name @@ :query \
+      "
+      @offers = Offer.joins(:game).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
   end
 
   def show
@@ -28,4 +36,5 @@ class OffersController < ApplicationController
   def offer_params
     params.require(:offer).permit(:user_id)
   end
+
 end

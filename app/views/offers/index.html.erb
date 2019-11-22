@@ -11,7 +11,7 @@
   <% @offers.each do |offer| %>
     <div class="card-game d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= offer.game.photo %>)">
       <div>
-        <h3>  <%= link_to offer.game.name, offer_path(offer), class: "link-to-show"%> </h3>
+        <h3> <%= link_to offer.game.name, offer_path(offer), class: "link-to-show"%> </h3>
         <p> <%= offer.game.user.username %></p>
       </div>
     </div>

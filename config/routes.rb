@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'pages#home'
 
-  root to: 'offers#index'
-
-  resources :offers, only: [ :show, :update ]
+  resources :offers, only: [ :index, :show, :update ]
 
   namespace :my do
     resources :offers, only: :index
