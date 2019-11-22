@@ -1,6 +1,18 @@
-.ludo-button input {
+.submit-ludo-button input {
   color: white;
   padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: $space-cadet;
+  transition: background 0.3s ease;
+  border: 1px solid $space-cadet;
+  background-size: cover;
+
+}
+
+.ludo-button {
+  color: white;
+  padding: 8px 20px;
   border-radius: 4px;
   font-weight: bold;
   background: $space-cadet;
@@ -12,11 +24,12 @@
 .ludo:hover {
   background: $fresh-air;
   color: white;
+  text-decoration: none;
 }
 
 .ludo-danger {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border-radius: 4px;
   font-weight: bold;
   background: $venetian-red;
@@ -28,4 +41,5 @@
 .ludo-danger:hover {
   background: $heat-wave;
   color: white;
+  text-decoration: none;
 }
